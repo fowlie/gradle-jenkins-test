@@ -1,0 +1,13 @@
+buildscript{
+    repositories{
+        maven {
+            url uri('../repo')
+        }
+    }
+    dependencies {
+        classpath 'com.github.fowlie.jenkinstest:plugin:0.1-SNAPSHOT'
+    }
+}
+
+apply plugin :'idea'
+apply plugin :'com.github.fowlie.jenkinstest:plugin'

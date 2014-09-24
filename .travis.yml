@@ -1,2 +1,2 @@
 language: groovy
-before_install: gradle uploadArchives
+before_install: gradle :plugin:uploadArchives

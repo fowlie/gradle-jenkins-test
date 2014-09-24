@@ -14,7 +14,7 @@ dependencies {
     compile localGroovy()
 }
 
-group = 'com.github.fowlie.jenkinstest'
+group = 'com.github.fowlie'
 version = '0.1-SNAPSHOT'
 
 uploadArchives {

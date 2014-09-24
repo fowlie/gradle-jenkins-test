@@ -1,3 +1,4 @@
+<img src="https://travis-ci.org/fowlie/jenkins-test.svg?branch=master"/>
 jenkins-test
 ============
 A Gradle plugin for Jenkins users. 

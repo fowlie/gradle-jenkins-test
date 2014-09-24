@@ -10,4 +10,4 @@ buildscript{
 }
 
 apply plugin :'idea'
-apply plugin :'com.github.fowlie.jenkinstest:plugin'
+//apply plugin :'com.github.fowlie.jenkinstest:plugin'

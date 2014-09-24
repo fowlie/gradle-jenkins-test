@@ -5,9 +5,17 @@ buildscript{
         }
     }
     dependencies {
-        //classpath 'com.github.fowlie.jenkinstest:plugin:0.1-SNAPSHOT'
+        classpath 'com.github.fowlie:gradle-jenkins-test:+' //Use latest version
     }
 }
 
-apply plugin :'idea'
-//apply plugin :'com.github.fowlie.jenkinstest:plugin'
+repositories {
+    mavenCentral()
+}
+
+apply plugin: com.github.fowlie.GradleJenkinsTestPlugin
+apply plugin: 'java'
+
+dependencies {
+    testCompile 'junit:junit:4.+'
+}

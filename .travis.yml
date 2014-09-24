@@ -1,4 +1,4 @@
 language: groovy
 before_install:
     - cd plugin
-    - gradle :plugin:uploadArchives
+    - gradle uploadArchives

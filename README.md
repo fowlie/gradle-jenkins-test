@@ -1,4 +1,4 @@
-<img src="https://travis-ci.org/fowlie/jenkins-test.svg?branch=master"/>
+<a href="https://travis-ci.org/fowlie/gradle-jenkins-test" target="_blank"><img src="https://travis-ci.org/fowlie/gradle-jenkins-test.svg?branch=master"/></a>
 jenkins-test
 ============
 A Gradle plugin for Jenkins users. 

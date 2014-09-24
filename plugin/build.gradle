@@ -1,7 +1,17 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
+    }
+}
+
 apply plugin: 'idea'
 apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 
 targetCompatibility = 1.6
 
@@ -15,7 +25,7 @@ dependencies {
 }
 
 group = 'com.github.fowlie'
-version = '0.1-SNAPSHOT'
+version = '0.1'
 
 uploadArchives {
     repositories {
@@ -25,4 +35,47 @@ uploadArchives {
     }
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+publishing {
+    publications {
+        mavenStuff(MavenPublication) {
+            from components.java
+            artifact sourcesJar {
+                classifier 'sources'
+            }
+        }
+    }
+}
+
 build.dependsOn uploadArchives
+
+bintray {
+    user = System.env.BINTRAY_USER
+    key = System.env.BINTRAY_API_KEY
+    publications = ['mavenStuff'] //When uploading Maven-based publication files
+    dryRun = false
+    publish = true
+    pkg {
+        repo = 'maven'
+        name = 'gradle-jenkins-plugin'
+        desc = 'A Gradle plugin that updates test report timestamps, so Jenkins doesn\'t mark the build as failed.'
+        websiteUrl = 'https://github.com/fowlie/gradle-jenkins-test'
+        issueTrackerUrl = 'https://github.com/fowlie/gradle-jenkins-test/issues'
+        vcsUrl = 'https://github.com/fowlie/gradle-jenkins-test.git'
+        licenses = ['MIT']
+        labels = ['gradle-plugin', 'jenkins', 'junit']
+        publicDownloadNumbers = true
+        version {
+            name = project.version
+            vcsTag = project.version
+        }
+    }
+}

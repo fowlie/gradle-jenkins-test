@@ -20,5 +20,6 @@ A Gradle plugin for Jenkins users. When Gradle skips the test task because it's 
   
   apply plugin: com.github.fowlie.GradleJenkinsTestPlugin
   ```
-#### Why create a plugin for this?
-First of all, I've always wanted to share something on GitHub. It's also my first Gradle plugin, so it has given me a good practise! It's an extremely small plugin, but it does something I guess many people need. And if you're going to write your own Gradle plugin, fork this project and think of it as a template!
+#### But why write a plugin from a piece of code thats not even 10 lines of code?
+* Your build script will be a little shorter and a little cleaner
+* I finally have something to blog about, besides how I created the blog

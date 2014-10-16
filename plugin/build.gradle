@@ -65,7 +65,7 @@ bintray {
     publish = true
     pkg {
         repo = 'maven'
-        name = 'gradle-jenkins-plugin'
+        name = 'gradle-jenkins-test'
         desc = 'A Gradle plugin that updates test report timestamps, so Jenkins doesn\'t mark the build as failed.'
         websiteUrl = 'https://github.com/fowlie/gradle-jenkins-test'
         issueTrackerUrl = 'https://github.com/fowlie/gradle-jenkins-test/issues'
@@ -76,7 +76,7 @@ bintray {
         version {
             name = project.version
             vcsTag = project.version
-            attributes = ['gradle-plugin': 'com.github.fowlie:com.github.fowlie']
+            attributes = ['gradle-plugin': 'com.github.fowlie:com.github.fowlie:gradle-jenkins-test']
         }
     }
 }

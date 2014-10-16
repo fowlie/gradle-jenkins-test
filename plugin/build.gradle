@@ -76,6 +76,7 @@ bintray {
         version {
             name = project.version
             vcsTag = project.version
+            attributes = ['gradle-plugin': 'com.github.fowlie:com.github.fowlie']
         }
     }
 }

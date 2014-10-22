@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/fowlie/gradle-jenkins-test.svg?branch=master)](https://travis-ci.org/fowlie/gradle-jenkins-test)
 [![Maintainer Status](http://stillmaintained.com/fowlie/gradle-jenkins-test.png)](http://stillmaintained.com/fowlie/gradle-jenkins-test)
-[![Release](http://img.shields.io/badge/release-0.1-47b31f.svg)](https://github.com/fowlie/gradle-jenkins-test/releases)
+[![Release](http://img.shields.io/badge/release-0.3-47b31f.svg)](https://github.com/fowlie/gradle-jenkins-test/releases)
 [![License](http://img.shields.io/badge/license-MIT-47b31f.svg)](#copyright-and-license)
 
 gradle-jenkins-test

@@ -7,8 +7,10 @@ class GradleJenkinsTestPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         project.apply(plugin: 'java')
-        project.task('jenkinsTest', type: GradleJenkinsTestTask) << {
-            description 'Updates the test report timestamps, so Jenkins doesn\'t mark the job as failed.'
+        project.task('jenkinsTest', type: GradleJenkinsTestTask) {
+            doLast {
+                description 'Updates the test report timestamps, so Jenkins doesn\'t mark the job as failed.'
+            }
         }
         project.test.dependsOn project.jenkinsTest
     }
